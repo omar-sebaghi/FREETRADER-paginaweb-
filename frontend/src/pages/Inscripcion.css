@@ -1,0 +1,91 @@
+.inscripcion {
+    max-width: 1000px; /* Se establece un ancho máximo de 1000px */
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box; /* Asegura que el padding no afecte al ancho total */
+    width: 100%; /* Asegura que el contenedor ocupe todo el espacio disponible */
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    margin-top: 0;
+  }
+  
+  .form-container {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Asegura que el contenedor ocupe todo el espacio disponible */
+    box-sizing: border-box; /* Para que el padding no afecte el ancho */
+  }
+  
+  .form-info-personal .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-info-personal label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-info-personal input {
+    width: 100%; /* Asegura que los inputs ocupen todo el ancho disponible */
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* Para que el padding no afecte el ancho */
+  }
+  
+  .form-info-personal .error {
+    border-color: red;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 12px;
+  }
+  
+  .asterisco {
+    color: red;
+  }
+  
+  .form-info-profesional .opciones label {
+    display: block;
+    margin-bottom: 10px;
+    max-width: 325px;
+  }
+  
+  .boton-inscripcion button {
+    width: auto;
+    padding: 14px 30px; /* Aumento el tamaño del botón */
+    font-size: 16px; /* Aumento el tamaño de la fuente */
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0 auto;
+    display: block; /* Centra el botón */
+  }
+  
+  .boton-inscripcion button:hover {
+    background-color: #218838;
+  }
+  
+  .inscripcion-exitosa {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .inscripcion-exitosa h3 {
+    color: green;
+  }
+  

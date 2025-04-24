@@ -1,0 +1,115 @@
+/* NAVBAR SUPERIOR (Fusionada con el Home) */
+.navbar-top {
+  background-color: black;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  position: relative;
+  margin: 15px 15px 0 15px; /* Márgenes a los lados y arriba */
+  border-radius: 30px 30px 0 0; /* Bordes redondeados arriba */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+/* NAVBAR FIJA QUE APARECE AL HACER SCROLL */
+.navbar-fixed {
+  background-color: black;
+  position: fixed;
+  top: -300px;  /* Oculta la navbar inicialmente */
+  width: 95%;
+  z-index: 999;
+  margin: 15px 15px 0 15px; /* Márgenes a los lados y arriba */
+  border-radius: 30px 30px 30px 30px; /* Bordes redondeados arriba */
+  transition: top 0.6s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Mostrar la navbar fija cuando se active el scroll */
+.navbar-fixed.visible {
+  top: 0;
+}
+
+/* Contenedor de la navbar */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+/* Estilos del logo */
+.logo a {
+  padding: 2px;
+  border: 1px solid;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+/* Color de "TRADER" */
+.trader {
+  color: green;
+}
+
+/* Estilos de los enlaces */
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  gap: 30px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background-color: #575757;
+  border-radius: 5px;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+
+    .menu-icon {
+      display: block;
+      position: absolute;
+      order: -1; /* Mueve la hamburguesa a la izquierda */
+      left: 20px; /* Asegura que esté bien alineada */
+      right: auto;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background: rgba(76, 72, 72, 0.9);
+      position: absolute;
+      top: 25px;
+      left: 0;
+      text-align: center;
+      border-radius: 30px;
+      gap: 10px;
+      padding-top: 30px;
+      padding-bottom: 15px;
+    }
+  
+    .nav-links.open {
+      display: flex;
+    }
+    .navbar-container {
+      flex-direction: row-reverse; /* Cambia el orden: Logo a la derecha, hamburguesa a la izquierda */
+    }
+  }
+

@@ -1,0 +1,74 @@
+.home {
+  position: relative;
+  height: 94vh; /* Ocupa toda la pantalla */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  color: white;
+  margin-left: 15px;
+  margin-right: 15px;
+  border-radius: 0 0 30px 30px; /* Bordes redondeados */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+
+}
+
+.separador {
+  width: 80%;
+  height: 1px;
+  background-color: #e1d4d4;
+  z-index: 100;
+}
+
+
+/* Capa oscura para mejorar la visibilidad del texto */
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6); /* Oscurece la imagen de fondo */
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 80%;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); /* Sombra para que resalte */
+
+}
+
+/* Título */
+.overlay h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Texto */
+.overlay p {
+  font-size: 1.2rem;
+  margin-top: 0;
+}
+
+/* Estilos para el mensaje "desliza hacia abajo" */
+.scroll-message {
+  position: absolute;
+  bottom: 10px; /* Coloca el mensaje justo al final de la imagen */
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.scroll-message i {
+  display: block;
+  margin-top: 10px;
+  font-size: 2rem; /* Tamaño de la flecha */
+  animation: bounce 1.5s infinite; /* Animación para hacerla "rebotar" */
+}
+
+/* responsive */
+@media screen and (max-width: 768px) {
+  /* Mostrar el mensaje en pantallas móviles */
+  .scroll-message {
+    display: block; /* Muestra el mensaje y la flecha solo en móvil */
+  }
+}

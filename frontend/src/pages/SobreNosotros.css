@@ -1,0 +1,217 @@
+/* Sección Principal de Sobre Nosotros */
+.sobre-nosotros {
+  background-color: #f8f8f8;
+  padding: 50px 0;
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Imagen de fondo con información */
+.imagen-fondo {
+  width: 100%;
+  height: 450px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contenido-sobre-imagen {
+  width: 85%;
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.historia {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.historia h2 {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+}
+
+.historia p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* Datos de Impacto */
+.datos-impacto {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.dato {
+  text-align: center;
+}
+
+.numero {
+  font-size: 2.3rem;
+  font-weight: bold;
+  color: #32cd32;
+}
+
+/* Sección de Valores y Equipo */
+.valores, .equipo {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.valores h2, .equipo h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.valores-lista, .equipo-lista {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.valor, .miembro {
+  background: white;
+  padding: 18px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.valor:hover, .miembro:hover {
+  transform: scale(1.05);
+}
+
+.valor img, .miembro img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 8px;
+}
+.miembro img {
+  width: 120px; /* Aumenta el tamaño */
+  height: 120px;
+  border-radius: 50%; /* Hace que sean redondas */
+  object-fit: cover;
+  border: 4px solid #ddd; /* Borde sutil */
+  transition: transform 0.3s ease-in-out;
+}
+
+.miembro img:hover {
+  transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+}
+
+.valor h3, .miembro h3 {
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.valor p, .miembro p {
+  font-size: 1rem;
+  color: #444;
+}
+
+.separador-1 {
+  width: 80%;
+  height: 1px;
+  background-color: #e1d4d4;
+  margin: 30px auto;
+}
+
+/* responsive */
+@media screen and (max-width: 768px) {
+  /* Ajustar imagen de fondo */
+  .imagen-fondo {
+    height: auto;
+    min-height: 350px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Ajustar contenido sobre la imagen */
+  .contenido-sobre-imagen {
+    width: 95%;
+    padding: 20px;
+    position: relative;
+    top: unset;
+    left: unset;
+    transform: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+  }
+
+  /* Reducir tamaño de los títulos */
+  .historia h2,
+  .valores h2,
+  .equipo h2 {
+    font-size: 1.8rem;
+  }
+
+  .historia p {
+    font-size: 1rem;
+  }
+
+  /* Ajustar las tarjetas de valores y equipo */
+  .valores-lista,
+  .equipo-lista {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .valor, .miembro {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* Hacer las imágenes de los miembros del equipo más grandes y redondas */
+  .miembro img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para que resalte */
+  }
+
+  /* Datos de impacto más compactos */
+  .datos-impacto {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .numero {
+    font-size: 2rem;
+  }
+
+  /* Espacio extra para que no choque con "Cursos" */
+  .sobre-nosotros {
+    padding-bottom: 100px;
+  }
+}
+
