@@ -3,10 +3,9 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false); // Estado para navbar fija
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // Estado para la hamburguesa
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Detectar scroll para mostrar la navbar fija después del Home
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > window.innerHeight * 0.9) {
@@ -20,14 +19,12 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Función para cerrar el menú después de hacer clic en un enlace
   const handleLinkClick = () => {
-    setIsMenuOpen(false); // Cierra el menú
+    setIsMenuOpen(false);
   };
 
   return (
     <>
-      {/* Navbar inicial fusionada con Home */}
       <nav className="navbar navbar-top">
         <div className="navbar-container">
           <h1 className="logo">
@@ -35,17 +32,14 @@ const Navbar = () => {
           </h1>
           <ul className={`nav-links ${isMenuOpen ? "open" : ""}`}>
             <li><Link to="/" onClick={handleLinkClick}>Inicio</Link></li>
-            <li><Link to="/cursos" onClick={handleLinkClick}>Cursos</Link></li>
-            <li><Link to="/sobre-nosotros" onClick={handleLinkClick}>Sobre Nosotros</Link></li>
+            <li><Link to="/sobre-nosotros" onClick={handleLinkClick}>Nosotros</Link></li>
           </ul>
-          {/* Icono de menú hamburguesa */}
           <div className="menu-icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             <i className={`fa ${isMenuOpen ? "fa-times" : "fa-bars"}`}></i>
           </div>
         </div>
       </nav>
 
-      {/* Navbar fija que aparece después del Home */}
       <nav className={`navbar navbar-fixed ${isScrolled ? "visible" : ""}`}>
         <div className="navbar-container">
           <h1 className="logo">
@@ -53,10 +47,8 @@ const Navbar = () => {
           </h1>
           <ul className={`nav-links ${isMenuOpen ? "open" : ""}`}>
             <li><Link to="/" onClick={handleLinkClick}>Inicio</Link></li>
-            <li><Link to="/cursos" onClick={handleLinkClick}>Cursos</Link></li>
-            <li><Link to="/sobre-nosotros" onClick={handleLinkClick}>Sobre Nosotros</Link></li>
+            <li><Link to="/sobre-nosotros" onClick={handleLinkClick}>Nosotros</Link></li>
           </ul>
-          {/* Icono de menú hamburguesa */}
           <div className="menu-icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             <i className={`fa ${isMenuOpen ? "fa-times" : "fa-bars"}`}></i>
           </div>

@@ -7,16 +7,15 @@ const Home = () => {
       className="home"
       style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/segunda-inicio.jpg)` }}
     >
-       {/* Línea separadora */}
-       <div className="separador"></div>
+      <div className="separador"></div>
+
       <div className="overlay">
-        <h1>Centro de Educación - <span className="trader">FREE</span> TRADER</h1>
-        <p>Explora nuestros cursos y empieza a aprender a programar desde ya.</p>
+        <h1>CopyTrading Automatizado - <span className="trader">BOT</span> TRADER</h1>
+        <p>Invierte como los profesionales sin mover un dedo. Nuestro bot opera por ti en tiempo real.</p>
       </div>
 
-      {/* Texto y flecha que solo aparece en formato móvil */}
       <div className="scroll-message">
-        <p>Desliza hacia abajo para más información</p>
+        <p>Desliza hacia abajo para descubrir cómo funciona</p>
         <i className="fa-solid fa-arrow-down"></i>
       </div>
     </div>

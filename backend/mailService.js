@@ -8,30 +8,24 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-async function enviarCorreo(email, cursoId) {
-  console.log(`Preparando para enviar correo a: ${email} para el curso ID: ${cursoId}`);
-  console.log('cursoId recibido en mailService:', cursoId);
-  console.log('Tipo de cursoId:', typeof cursoId);
-
-  let cursoNombre = '';
-  let videoUrl = '';
-
-  // Aquí defines el nombre del curso y el enlace al video
-  cursoId = parseInt(cursoId);
-  if (cursoId === 1) {
-    cursoNombre = 'REACT';
-    videoUrl = 'http://localhost:3001/videos/programacion.mp4'; // Enlace al video 1
-  } else if (cursoId === 2) {
-    cursoNombre = 'JAVASCRIPT';
-    videoUrl = 'http://localhost:3001/videos/diseno-web.mp4'; // Enlace al video 2
-  }
+async function enviarCorreo(email) {
+  console.log(`Preparando para enviar correo a: ${email}`);
 
   const mailOptions = {
     from: 'omarforexxx@gmail.com',
     to: email,
-    subject: `¡Gracias por inscribirte al curso de ${cursoNombre}!`,
-    text: `¡Hola! Gracias por comprar el curso de ${cursoNombre}. Puedes acceder al video aquí: ${videoUrl}`,
-    html: `<p>¡Hola!</p><p>Gracias por inscribirte al curso de <strong>${cursoNombre}</strong>.</p><p>Puedes acceder al video aquí: <a href="${videoUrl}">${videoUrl}</a></p>`,
+    subject: '¡Gracias por inscribirte en Free Trader!',
+    text: `¡Hola! Gracias por inscribirte en Free Trader. A continuación te dejamos los enlaces importantes para comenzar: \n\n`
+      + `1. Regístrate en el broker: [Enlace al Broker] \n`
+      + `2. Únete a nuestra cuenta de copytrading: [Enlace al Copytrading] \n\n`
+      + `Si tienes alguna pregunta o duda, no dudes en contactarnos. ¡Nos pondremos en contacto contigo en breve!`,
+    html: `<p>¡Hola!</p><p>Gracias por inscribirte en <strong>Free Trader</strong>.</p>`
+      + `<p>A continuación te dejamos los enlaces importantes para comenzar:</p>`
+      + `<ul>`
+      + `<li><strong>1.</strong> Regístrate en el broker: <a href="[Enlace al Broker]">[Enlace al Broker]</a></li>`
+      + `<li><strong>2.</strong> Únete a nuestra cuenta de copytrading: <a href="[Enlace al Copytrading]">[Enlace al Copytrading]</a></li>`
+      + `</ul>`
+      + `<p>Si tienes alguna pregunta o duda, no dudes en contactarnos. ¡Nos pondremos en contacto contigo en breve!</p>`,
   };
 
   try {

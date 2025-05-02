@@ -1,115 +1,68 @@
-/* Sección de cursos */
+/* Sección de video demo */
 .cursos {
   background-color: #f8f8f8;
   color: #333;
   text-align: center;
+  padding: 60px 20px;
 }
 
 /* Título */
 .titulo-seccion {
   font-size: 2.8rem;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: bold;
   color: #222;
 }
 
-/* Contenedor de las tarjetas */
-.curso-lista {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  justify-content: center;
+/* Contenedor del video */
+.video-container {
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  padding: 0 15px;
 }
 
-/* Tarjetas */
-.curso {
-  background-color: #fff;
+.video {
+  width: 100%;
   border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  padding: 25px;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  text-align: center;
-  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-.curso:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
-
-/* Efecto de iluminación al pasar el mouse */
-.curso::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 60%;
-  height: 5px;
-  background: #4CAF50; /* Verde */
-  border-radius: 50px;
-  transform: translateX(-50%);
-  transition: width 0.3s ease-in-out;
-}
-
-.curso:hover::before {
-  width: 80%;
-}
-
-/* Imagen */
-.curso-imagen {
-  width: 100px; /* Aumentamos el tamaño */
-  height: 100px;
-  object-fit: contain;
-  margin-bottom: 20px;
-}
-
-/* Texto */
-.curso-info h2 {
-  font-size: 1.6rem;
-  margin-bottom: 10px;
-  font-weight: bold;
-  color: #222;
-}
-
-.curso-info p {
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 20px;
-  line-height: 1.5;
-}
-
-/* Botón */
-.btn-detalles {
+/* Botón de inscripción */
+.btn-inscribirse {
   display: inline-block;
-  padding: 12px 18px;
-  background-color: #4CAF50; /* Verde */
+  padding: 14px 28px;
+  background-color: #4CAF50;
   color: #fff;
   text-decoration: none;
   font-weight: bold;
   border-radius: 8px;
+  font-size: 1.1rem;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  font-size: 1rem;
 }
 
-.btn-detalles:hover {
+.btn-inscribirse:hover {
   background-color: #388E3C;
   transform: scale(1.05);
 }
 
+/* Línea separadora al final */
 .separador-2 {
   width: 80%;
   height: 1px;
   background-color: #e1d4d4;
-  margin: 20px auto;
-  margin-top: 90px;
+  margin: 60px auto 0 auto;
 }
 
-/* responsive */
+/* Responsive */
 @media screen and (max-width: 768px) {
-  .curso-lista {
-    flex-direction: column;
-    align-items: center;
+  .titulo-seccion {
+    font-size: 2rem;
+  }
+
+  .btn-inscribirse {
+    padding: 12px 20px;
+    font-size: 1rem;
   }
 }
